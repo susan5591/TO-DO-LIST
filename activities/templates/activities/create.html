@@ -1,9 +1,21 @@
 {% extends 'activities/home.html'%}
 {% block body%}
 
-<form method="POST" action="">
+<form method="POST" action='{% url "activities:create" %}'>
     {% csrf_token %}
-    {{form.as_p}}
+
+    <!-- To provide the field for input as given from django -->
+    <!-- {{form.as_p}} -->
+    
+    <!-- To add custom web design instead of using django format -->
+
+    <label>Title: </label>
+    {{form.Title}}
+    <br>
+    <br>
+    <label>Work: </label>
+    {{form.work}}
+    <br>
     <br>
     <input type="submit" value="submit">
 </form>
