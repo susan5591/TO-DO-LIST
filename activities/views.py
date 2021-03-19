@@ -6,7 +6,11 @@ from . import models
 
 # Create your views here.
 def home(request):
-    return render(request,'activities/home.html')
+    task = models.Work.objects.all().order_by('-id')
+    context = {
+        'task':task
+    }
+    return render(request,'activities/home.html',context)
 
 def create(request):
     if request.method == 'POST':
