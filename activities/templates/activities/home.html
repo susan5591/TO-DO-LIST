@@ -1,17 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-</head>
-<body>
-    <a href="{% url 'activities:home'%}">Home</a>
-    <a href="{% url 'activities:create'%}">Create</a>
-    <h1>Welcome to the to-do list page.</h1>
-    {% block body %}
-
-    {% endblock %}
-</body>
-</html>
+{% extends 'activities/base.html'%}
+<!-- {% load static %} -->
+{% block body%}
+<h1 id="main">Welcome to the to-do list page.</h1>
+<table>
+    <thead>
+        <tr>
+            <!-- <th>S.N</th> -->
+            <th>Title</th>
+            <th>Work</th>
+            <!-- <th colspan="2">Activities</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in task %}
+            <tr>
+                <!-- <td></td> -->
+                <td>{{i.Title}}</td>
+                <td>{{i.work}}</td>
+                <!-- <td><a href="">Edit</a></td> -->
+            </tr>            
+        {% endfor %}
+    </tbody>
+</table>
+{%endblock%}
