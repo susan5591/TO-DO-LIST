@@ -15,7 +15,7 @@
         {% for i in task %}
             <tr>
                 <!-- <td></td> -->
-                <td>{{i.Title}}</td>
+                <td><a href="{% url 'activities:detail' i.pk %}">{{i.Title}}</a></td>
                 <td>{{i.work}}</td>
                 <!-- <td><a href="">Edit</a></td> -->
             </tr>            
