@@ -1,31 +1,38 @@
 {% extends 'activities/base.html'%}
 <!-- {% load static %} -->
 {% block body%}
-<h1 id="main">Welcome to the to-do list page.</h1>
-<table>
+<br>
+
+	<h1 align="center">Welcome to Your To-Do List Page</h1>
+<br>
+
+
+<table class="table table-bordered table-hover">
     <thead>
-        <tr>
-            <!-- <th>S.N</th> -->
-            <th>Title</th>
-            <th>Work</th>
-            <th>
-                <form method="GET">
-				    {{myFilter.form}}
-		            <button  type="submit">Search</button>
-		        </form>
-            </th>
-            <!-- <th colspan="2">Activities</th> -->
-        </tr>
+      <tr>
+        <th style="text-align:center">S.N</th>
+        <th style="text-align:center">Title</th>
+        <th style="text-align:center">Job</th>
+        <th style="text-align:center">Entry Dates</th>
+        <th style="text-align:center">Due Dates</th>
+        <th style="text-align:center">Status</th>
+      </tr>
     </thead>
     <tbody>
         {% for i in task %}
             <tr>
                 <!-- <td></td> -->
-                <td><a href="{% url 'activities:detail' i.pk %}">{{i.Title}}</a></td>
-                <td>{{i.work}}</td>
-                <!-- <td><a href="">Edit</a></td> -->
+                <td style="text-align:center">{{forloop.counter}}</td>
+                <td style="text-align:center"><a href="{% url 'activities:detail' i.pk %}"><h5>{{i.Title}}</h5></a></td>
+                <td style="text-align:center">{{i.Job}}</td>
+                <td style="text-align:center">{{i.Entry_Dates}}</td>
+                <td style="text-align:center">{{i.Due_Dates}}</td>
+                <td style="text-align:center">{{i.Priority}}</td>
             </tr>            
         {% endfor %}
     </tbody>
 </table>
 {%endblock%}
+
+
+
