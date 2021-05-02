@@ -4,7 +4,10 @@
 
         <h1>{{info.Title}}</h1>
         <br>
-        <p>{{info.work}}</p>
+        <p>{{info.Job}}</p>
+        <p>{{info.Entry_Dates}}</p>
+        <p>{{info.Due_Dates}}</p>
+        <p>{{info.Priority}}</p>
         <h4><a href="{% url 'activities:edit' info.id %}">Edit</a></h4>
         <h4><a href="{% url 'activities:delete' info.id %}">Delete </a></h4>
 
