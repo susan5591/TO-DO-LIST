@@ -1,0 +1,51 @@
+.list{
+    display: flex;
+    height: 70px;
+    justify-content: space-around;
+    gap: 5rem;
+    width: 90%;
+    background-color: aquamarine;
+    margin: auto;
+    align-items: center;
+    margin-top: 10px;
+}
+.list img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.list p{
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.delete,.update{
+    font-size: 1.2rem;
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 5px;
+}
+.delete{
+    background-color: rgb(243, 79, 79);
+}
+
+.update{
+    background-color: rgb(65, 137, 196);
+}
+
+.imaging{
+    width: 100%;
+    object-fit: cover;
+
+
+}
+
+.head{
+    display: block;
+    height: 80px;
+    width: 80px;
+    overflow: hidden;
+    /* object-fit: cover; */
+}
